@@ -18,7 +18,7 @@
 }
 
 body {
-    min-height: 100svh;
+    min-height: 100dvh;
     font-family: 'Poppins', sans-serif;
     background: #fff url(../img/pink-paint-layers.jpg) center / cover no-repeat;
 }
@@ -284,13 +284,13 @@ textarea {
 }
 
 .note-title, .note-description {
-    white-space: nowrap; /* Keep the text on a single line */
-    overflow: hidden; /* Hide text that goes beyond the container */
-    text-overflow: ellipsis; /* Add '...' at the end of the text */
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
   }
 
   .notes-container {
-    max-height: 600px; /* Adjust this value based on the height of six notes */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 540px; 
+    overflow-y: auto; 
   }
   
