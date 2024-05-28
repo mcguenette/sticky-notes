@@ -282,3 +282,15 @@ textarea {
 .fa-border.selected {
     border: var(--fa-border-width, .08em) var(--fa-border-style, solid) #f48bcb !important;
 }
+
+.note-title, .note-description {
+    white-space: nowrap; /* Keep the text on a single line */
+    overflow: hidden; /* Hide text that goes beyond the container */
+    text-overflow: ellipsis; /* Add '...' at the end of the text */
+  }
+
+  .notes-container {
+    max-height: 600px; /* Adjust this value based on the height of six notes */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
