@@ -290,7 +290,9 @@ textarea {
   }
 
   .notes-container {
-    max-height: 540px; 
-    overflow-y: auto; 
-  }
+    max-height: 540px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
   

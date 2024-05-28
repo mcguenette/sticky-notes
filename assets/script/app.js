@@ -14,6 +14,7 @@ utils.onEvent('DOMContentLoaded', document, () => {
     const colorPicker = utils.select('.color-picker');
     const notesContainer = utils.select('.notes-container');
     const todayList = utils.select('#today-list');
+    const home = utils.select('.fa-home');
 
     let selectedColor = '#ffd43ba1';
 
@@ -223,5 +224,10 @@ utils.onEvent('DOMContentLoaded', document, () => {
             const noteId = sidebarItem.getAttribute('data-id');
             editNoteById(noteId);
         }
+    });
+
+    utils.onEvent('click', home, () => {
+        isEditing = false;
+        switchView();
     });
 });
