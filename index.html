@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MC Guenette">
+    <meta name="description" content="MC Guenette: Software Developer Portfolio">
+    <meta name="keywords" content="web developer, web, front-end, css, javascript, html, react">
+    <link rel="shortcut icon" href="https://res.cloudinary.com/dzdgpwtox/image/upload/v1656263678/designer-tool-uploads/bucket_9200/1656263676160.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500;600&family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20608a4ccb.js" crossorigin="anonymous"></script>
+    <script src="./assets/script/app.js" type="module"></script>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>Sticky Notes</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <section class="center-layout center">
+                <div class="application-container">
+                    <div class="application-body flex">
+                        <div class="sidebar-container">
+                            <div class="header-nav flex align-items-center">
+                                <h2 class="title-sidebar">Menu</h2>
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <div class="sidebar-notes">
+                                <div class="menu-items">
+                                    <div class="menu-item flex align-items-center">
+                                        <i class="fa-solid fa-bolt"></i>
+                                        <h4 class="menu-title">TODAY</h4>  
+                                    </div>
+                                    <div id="today-list"></div>
+                                </div>
+                                <div class="menu-items">
+                                    <div class="menu-item flex align-items-center">
+                                        <i class="fa-solid fa-list-check"></i>
+                                        <h4 class="menu-title">LISTS</h4>  
+                                    </div>
+                                    <div id="tasks-list"></div>
+                                </div>
+                                <div class="menu-items">
+                                    <div class="menu-item flex align-items-center">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <h4 class="menu-title">CALENDAR</h4>  
+                                    </div>
+                                    <div id="calendar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sticky-notes-container" id="sticky-notes-container">
+                            <div class="header notes-nav align-items-center flex">
+                                <div class="notes-bar"></div>
+                            </div>
+                            <div class="notes-container">
+                                <div class="note-card card-flex">
+                                    <div class="add-new-note">
+                                        <i class="fa-solid fa-plus" id="add-note-btn"></i>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div id="new-note-container" class="hidden new-notes-container">
+                            <div class="new-note-content form">
+                                <div class="header-nav flex align-items-center">
+                                    <h2 id="note-heading">New Note</h2>
+                                </div>
+
+                                <form>
+                                    <label>Color</label>
+                                    <div class="color-picker">
+                                        <i class="fa-solid fa-square fa-border" style="color: #ffd43ba1;" data-color="#ffd43ba1"></i>
+                                        <i class="fa-solid fa-square fa-border" style="color: #b195fab0;" data-color="#b195fab0"></i>
+                                        <i class="fa-solid fa-square fa-border" style="color: #63e6bea8;" data-color="#63e6bea8"></i>
+                                        <i class="fa-solid fa-square fa-border" style="color: #74c0fc9e;" data-color="#74c0fc9e"></i>
+                                    </div>   
+                                    <div>
+                                        <label for="note-title">Title</label>
+                                        <input type="text" id="note-title" maxlength="150">
+                                    </div>
+                                    <div class="note-textarea">
+                                        <label for="note-content">Content</label>
+                                        <textarea id="note-content" maxlength="1000"></textarea>
+                                    </div>
+                                    <div class="button-footer flex center-layout">
+                                        <button id="save-note-btn" class="primary-button">Save</button>
+                                        <button id="cancel-note-btn">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

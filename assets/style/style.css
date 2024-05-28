@@ -1,0 +1,284 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+:root {
+    --primary-dark: #202124;
+    --secondary-dark-color: #ffffff0d;
+    --light-color: #fafafa;
+    --light-grey: #ebebeb;
+    --primary-grey: #525252;
+    --primary-blue: #09f;
+    --secondary-blue: rgb(0, 119, 198);
+    --primary-pink:#f48bcb;
+    --secondary-pink: #ffd7f6;
+    --primary-green: #9f0;
+    --primary-red: rgb(255, 0, 93);
+    --primary-orange: #f90;
+    --primary-purple: #90f;
+}
+
+body {
+    min-height: 100svh;
+    font-family: 'Poppins', sans-serif;
+    background: #fff url(../img/pink-paint-layers.jpg) center / cover no-repeat;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+    min-height: 100dvh;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+section {
+    height: 100svh;
+}
+
+form {
+    height: 100%;
+    padding: 5px;
+}
+
+.new-note-content {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.new-notes-container {
+    position: relative;
+}
+
+.application-container {
+    position: fixed;
+    width: 1080px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgb(0 0 0 / 10%);
+    border: 0.5px solid rgb(0 0 0 / 10%);
+    overflow: hidden;
+    background-color: #fafafa;
+}
+
+.application-body {
+    gap: 20px;
+}
+
+.sidebar-container {
+    width: 240px;
+    padding: 0px 15px;
+    background-color: #f4f4f4;
+}
+
+.header-nav {
+    height: 50px;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.sidebar-notes {
+    height: 484px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 5px;
+}
+
+.menu-item.flex.align-items-center {
+    font-size: 1.2rem;
+}
+
+i.fa-solid.fa-bars {
+    font-size: 2.2rem;
+    padding: 0px 0px 0px 5px;
+}
+
+i.fa-solid.fa-plus {
+    font-size: 46px;
+}
+
+h4.menu-title {
+    margin-left: 5px;
+}
+
+.sticky-notes-container, .new-notes-container {
+    width: calc(100% - 240px);
+    height: 100%;
+}
+
+p.note-title-sidebar {
+    margin-left: 5px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+div#today-list, #tasks-list {
+    margin-bottom: 10px;
+}
+
+/* Notes */
+.note-card {
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.note-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note-title {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.note-description {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+.notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 20px 20px 20px 0px;
+}
+
+.card-flex {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 240px;
+    flex-wrap: wrap;
+}
+
+.note-content {
+    height: 100%;
+    width: 100%;
+}
+
+.note-card {
+    border: 0.5px solid rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+p.time-stamp {
+    font-size: 11px;
+    color: var(--primary-grey);
+}
+
+.color-picker {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.color-picker i {
+    cursor: pointer;
+}
+
+
+/* Buttons and inputs */
+.delete-note-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: transparent;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: var(--primary-grey);
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.delete-note-btn:hover {
+    color: var(--primary-dark);
+}
+
+.primary-button {
+    background-color: var(--primary-pink);
+    color: var(--light-color);
+    width: 100px;
+    transition: all 0.5s ease;
+}
+
+button {
+    padding: 7px 15px;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 42px;
+}
+
+button#cancel-note-btn {
+    background-color: var(--light-grey);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: 5px;
+}
+
+button.delete-note-btn {
+    background-color: transparent;
+    display: flex;
+    align-items: flex-start;
+}
+
+.button-footer {
+    justify-content: right;
+    height: 80px;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+label {
+    font-size: 2rem;
+}
+
+input, textarea {
+    width: 100%;
+    background-color: transparent;
+}
+
+textarea {
+    padding: 12px 18px 12px 0px;
+    font-size: 1.7rem;
+    font-weight: 400;
+    height: calc(100% - 50px - 80px);
+    resize: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.fa-border.selected {
+    border: var(--fa-border-width, .08em) var(--fa-border-style, solid) #f48bcb !important;
+}
