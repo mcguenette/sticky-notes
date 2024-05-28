@@ -6,7 +6,7 @@
 - Add FOCUS to new note - when title is blank or when content is blank and you click save
 - Forcing the save and cancel buttons to the bottom
 - Make sticky notes look more like sticky notes
-- Adjust scroll, make it invisible
+- HOME icon have it not switch views, only go to main view
 - Content height to be full page
 - Better highlight/style for colour icons, maybe change the note background color based on their selection?
 
